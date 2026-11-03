@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Sanket</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="icon" type="image/svg+xml" th:href="@{/favicon.svg}">
+    <link rel="stylesheet" th:href="@{/css/blog.css}">
+</head>
+<body>
+    <div th:replace="~{fragments/layout :: nav}"></div>
+
+    <main class="container">
+        <p class="eyebrow">Blog</p>
+        <h1>Writing</h1>
+
+        <p class="lead" th:if="${#lists.isEmpty(posts)}">No posts yet.</p>
+
+        <div class="card-list">
+            <a class="card card-link" th:each="post : ${posts}" th:href="@{/blog/{id}(id=${post.id})}">
+                <p class="eyebrow" th:text="${post.createdAt}">2026-01-01</p>
+                <h2 th:text="${post.title}">Title</h2>
+                <p th:text="${post.summary}">Summary</p>
+            </a>
+        </div>
+    </main>
+
+    <div th:replace="~{fragments/layout :: footer}"></div>
+</body>
+</html>

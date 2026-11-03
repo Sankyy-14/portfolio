@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<header th:fragment="nav" class="site-header">
+    <div class="nav-inner">
+        <a class="brand" th:href="@{/}">Sanket</a>
+        <nav class="nav-links">
+            <a th:href="@{/projects}">Projects</a>
+            <a th:href="@{/blog}">Blog</a>
+            <a th:href="@{/about}">About</a>
+        </nav>
+    </div>
+</header>
+
+<footer th:fragment="footer" class="site-footer">
+    <div class="nav-inner">
+        <span>&copy; 2026 Sanket</span>
+        <div class="nav-links">
+            <a th:href="@{/privacy}">Privacy</a>
+            <a th:href="@{/terms}">Terms</a>
+            <a href="https://github.com/Sankyy-14">GitHub</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

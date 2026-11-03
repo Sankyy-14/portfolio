@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Sanket</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="icon" type="image/svg+xml" th:href="@{/favicon.svg}">
+    <link rel="stylesheet" th:href="@{/css/legal.css}">
+</head>
+<body>
+    <div th:replace="~{fragments/layout :: nav}"></div>
+
+    <main class="container legal">
+        <p class="eyebrow">Legal</p>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: November 2, 2026</p>
+
+        <h2>What this site collects</h2>
+        <p>This is a personal portfolio website. It does not ask visitors for any personal information, and it has no sign-up, comments or contact forms.</p>
+
+        <h2>Analytics and tracking</h2>
+        <p>This site does not use analytics, advertising, or third-party trackers. It uses system fonts and loads no scripts from other companies.</p>
+
+        <h2>Cookies</h2>
+        <p>Visitors do not receive any cookies. A session cookie is set only when the site owner logs into the admin area.</p>
+
+        <h2>Server logs</h2>
+        <p>Like most websites, the server or hosting provider may keep standard technical logs, such as IP address, browser type and the pages requested. These are used for security and keeping the site running.</p>
+
+        <h2>External links</h2>
+        <p>Pages on this site link to other websites, such as GitHub. Those sites have their own privacy practices, which I do not control.</p>
+
+        <h2>Contact</h2>
+        <p>Questions about this policy can be sent through my <a href="https://github.com/Sankyy-14">GitHub profile</a>.</p>
+    </main>
+
+    <div th:replace="~{fragments/layout :: footer}"></div>
+</body>
+</html>

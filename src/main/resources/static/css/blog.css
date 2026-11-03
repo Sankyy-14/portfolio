@@ -1,0 +1,11 @@
+a.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-body {
+    white-space: pre-wrap;
+    margin: 40px 0;
+    line-height: 1.8;
+}

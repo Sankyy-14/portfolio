@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit post | Sanket</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="icon" type="image/svg+xml" th:href="@{/favicon.svg}">
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+<body>
+    <div th:replace="~{fragments/layout :: nav}"></div>
+
+    <main class="container">
+        <p class="eyebrow">Admin</p>
+        <h1 th:text="${post.id == null} ? 'New post' : 'Edit post'">Post</h1>
+
+        <form class="post-form" th:action="@{/admin/save}" method="post">
+            <input type="hidden" name="id" th:value="${post.id}">
+
+            <label for="title">Title</label>
+            <input id="title" name="title" type="text" th:value="${post.title}" required>
+
+            <label for="summary">Summary</label>
+            <textarea id="summary" name="summary" rows="3" maxlength="500" required th:text="${post.summary}"></textarea>
+
+            <label for="content">Content</label>
+            <textarea id="content" name="content" rows="16" maxlength="20000" required th:text="${post.content}"></textarea>
+
+            <div class="actions">
+                <button class="btn btn-primary" type="submit">Save</button>
+                <a class="btn" th:href="@{/admin}">Cancel</a>
+            </div>
+        </form>
+    </main>
+
+    <div th:replace="~{fragments/layout :: footer}"></div>
+</body>
+</html>

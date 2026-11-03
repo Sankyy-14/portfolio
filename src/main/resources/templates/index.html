@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanket</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="icon" type="image/svg+xml" th:href="@{/favicon.svg}">
+</head>
+
+<body>
+    <div th:replace="~{fragments/layout :: nav}"></div>
+
+    <main class="container">
+        <p class="eyebrow">VIT Bhopal University</p>
+        <h1>Sanket</h1>
+        <p class="lead">
+            Second-year B.Tech CSE (AI/ML) student. I build AI/ML and full-stack projects.
+        </p>
+        <div class="actions">
+            <a class="btn btn-primary" href="https://github.com/Sankyy-14">GitHub</a>
+        </div>
+    </main>
+
+    <div th:replace="~{fragments/layout :: footer}"></div>
+</body>
+
+</html>

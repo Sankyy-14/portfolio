@@ -1,0 +1,18 @@
+.legal h2 {
+    font-size: 1.25rem;
+    margin: 36px 0 8px;
+}
+
+.legal p {
+    color: var(--muted);
+}
+
+.legal p a {
+    color: var(--accent);
+}
+
+.legal .updated {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.85rem;
+    color: var(--muted);
+}

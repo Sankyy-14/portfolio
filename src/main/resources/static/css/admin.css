@@ -1,0 +1,72 @@
+.admin-top {
+    margin: 24px 0;
+    align-items: center;
+}
+
+button.btn {
+    background: transparent;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+    line-height: inherit;
+}
+
+button.btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+button.btn-primary {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+button.btn-primary:hover {
+    background: transparent;
+    color: var(--accent);
+}
+
+.btn-danger:hover {
+    border-color: #f87171;
+    color: #f87171;
+}
+
+.card .actions {
+    margin-top: 8px;
+    align-items: center;
+}
+
+.post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+.post-form label {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-top: 12px;
+}
+
+.post-form input,
+.post-form textarea {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px 12px;
+    width: 100%;
+}
+
+.post-form input:focus,
+.post-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.post-form .actions {
+    margin-top: 24px;
+}

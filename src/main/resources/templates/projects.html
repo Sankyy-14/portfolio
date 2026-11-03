@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Sanket</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="icon" type="image/svg+xml" th:href="@{/favicon.svg}">
+</head>
+<body>
+    <div th:replace="~{fragments/layout :: nav}"></div>
+
+    <main class="container">
+        <p class="eyebrow">Projects</p>
+        <h1>Things I've built</h1>
+
+        <div class="card-list">
+            <article class="card" th:each="project : ${projects}">
+                <h2 th:text="${project.title}">Title</h2>
+                <p th:text="${project.description}">Description</p>
+                <ul class="tags">
+                    <li th:each="tag : ${project.tags}" th:text="${tag}">tag</li>
+                </ul>
+            </article>
+        </div>
+    </main>
+
+    <div th:replace="~{fragments/layout :: footer}"></div>
+</body>
+</html>
